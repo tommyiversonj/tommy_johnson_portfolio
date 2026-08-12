@@ -2,6 +2,8 @@
 
 A single-page portfolio site built with React, Vite, and Tailwind CSS.
 
+**Live:** https://tommy-johnson-portfolio.vercel.app
+
 ## Local development
 
 ```bash
@@ -34,20 +36,27 @@ npm run build
 
 Outputs a static site to `dist/`.
 
-## Deploying to Vercel
+## Deployment
 
-1. Push this repo to GitHub.
-2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import the
-   GitHub repo.
-3. Vercel auto-detects Vite; no build config changes needed.
-4. Under **Environment Variables**, add `VITE_FORMSPREE_ID` with your
-   Formspree form ID.
-5. Deploy. Future pushes to `main` auto-deploy.
+This repo is connected to Vercel (project `tommy-johnson-portfolio`, owner
+`tommyiversonj`). Every push to `main` auto-deploys to production at
+https://tommy-johnson-portfolio.vercel.app — no manual steps needed.
+
+`VITE_FORMSPREE_ID` is already set as a production environment variable in
+the Vercel project settings.
+
+To deploy manually if needed (e.g. testing before a push):
+
+```bash
+npx vercel deploy --prod
+```
+
+No custom domain is attached yet — the site runs on the free `.vercel.app`
+subdomain. To add one later, buy/point a domain and connect it under the
+Vercel project's **Settings → Domains**.
 
 ## Before going live
 
-- Update `public/robots.txt` and `public/sitemap.xml` — replace
-  `YOUR-DOMAIN` with your actual deployed domain.
 - Swap `public/favicon.svg` / `public/og-image.svg` for custom artwork if
   you'd like something beyond the generated placeholders.
 
