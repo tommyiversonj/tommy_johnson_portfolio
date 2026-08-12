@@ -1,6 +1,6 @@
 export default function ProjectCard({ project }) {
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+    <div className="flex flex-col h-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-accent/40">
       <div className="flex items-start justify-between gap-3 mb-2">
         <h3 className="font-semibold text-lg text-slate-900 dark:text-white">{project.title}</h3>
         {project.caseStudy && (

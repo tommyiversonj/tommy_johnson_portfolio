@@ -19,13 +19,13 @@ export default function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href="#projects"
-            className="px-6 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-medium transition-colors"
+            className="px-6 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-medium shadow-sm hover:shadow-md transition-all"
           >
             View Projects
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-medium hover:border-accent hover:text-accent dark:hover:text-accent-light transition-colors"
+            className="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-medium hover:border-accent hover:text-accent dark:hover:text-accent-light hover:shadow-sm transition-all"
           >
             Get In Touch
           </a>

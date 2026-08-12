@@ -8,7 +8,7 @@ export default function Skills() {
         {skills.map((group) => (
           <div
             key={group.category}
-            className="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700"
+            className="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700 transition-all duration-200 hover:shadow-md hover:border-accent/40"
           >
             <h3 className="font-semibold text-slate-900 dark:text-white mb-3">{group.category}</h3>
             <ul className="space-y-1.5">

@@ -8,7 +8,7 @@ export default function Education() {
         {education.map((item) => (
           <div
             key={item.degree}
-            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6"
+            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:border-accent/40"
           >
             <h3 className="font-semibold text-slate-900 dark:text-white mb-1">{item.degree}</h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">{item.school}</p>
