@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect width="1200" height="630" fill="url(#g)" opacity="0.15"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect x="70" y="70" width="72" height="72" rx="16" fill="#0d9488"/>
+  <text x="106" y="120" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">TJ</text>
+  <text x="70" y="280" font-family="'Segoe UI', Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Tommy Iverson Johnson</text>
+  <text x="70" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="32" fill="#5eead4">Backend Software Engineer &amp; Medical Informatics Officer</text>
+  <text x="70" y="400" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#94a3b8">Building reliable backend systems and health information platforms across Liberia</text>
+</svg>
