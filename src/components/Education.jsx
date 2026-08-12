@@ -1,9 +1,10 @@
 import { education } from '../data/content'
+import SectionHeading from './SectionHeading'
 
 export default function Education() {
   return (
     <section id="education" className="section-container">
-      <h2 className="section-heading">Education</h2>
+      <SectionHeading>Education</SectionHeading>
       <div className="grid sm:grid-cols-2 gap-6">
         {education.map((item) => (
           <div

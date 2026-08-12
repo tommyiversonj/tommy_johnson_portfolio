@@ -1,9 +1,10 @@
 import { skills, softSkills } from '../data/content'
+import SectionHeading from './SectionHeading'
 
 export default function Skills() {
   return (
     <section id="skills" className="section-container bg-slate-50 dark:bg-slate-800/40 rounded-3xl">
-      <h2 className="section-heading">Skills</h2>
+      <SectionHeading>Skills</SectionHeading>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((group) => (
           <div

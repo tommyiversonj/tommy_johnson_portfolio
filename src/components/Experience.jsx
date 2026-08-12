@@ -1,9 +1,10 @@
 import { experience } from '../data/content'
+import SectionHeading from './SectionHeading'
 
 export default function Experience() {
   return (
     <section id="experience" className="section-container">
-      <h2 className="section-heading">Experience</h2>
+      <SectionHeading>Experience</SectionHeading>
       <div className="space-y-8">
         {experience.map((job) => (
           <article

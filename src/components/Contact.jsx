@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { personal } from '../data/content'
+import SectionHeading from './SectionHeading'
 
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID
 
@@ -37,7 +38,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-container">
-      <h2 className="section-heading">Contact</h2>
+      <SectionHeading>Contact</SectionHeading>
 
       <div className="grid md:grid-cols-2 gap-10">
         <div className="space-y-4">

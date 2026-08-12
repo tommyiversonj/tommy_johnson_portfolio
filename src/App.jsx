@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Reveal from './components/Reveal'
 
 export default function App() {
   const { theme, toggleTheme } = useDarkMode()
@@ -17,12 +18,24 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Education />
-        <Contact />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Experience />
+        </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Education />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
     </div>

@@ -2,7 +2,7 @@ export const personal = {
   name: 'Tommy Iverson Johnson',
   title: 'Backend Software Engineer & Medical Informatics Officer',
   tagline: 'Building reliable backend systems and health information platforms across Liberia',
-  location: 'Harper City, Maryland County, Liberia',
+  focusAreas: ['Backend APIs', 'Health Informatics', 'OpenMRS'],
   email: 'johnsoniverson@gmail.com',
   phone: '+231 886 137 029',
   phoneAlt: '+231 778 892 288',
