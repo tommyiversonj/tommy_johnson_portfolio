@@ -10,6 +10,15 @@ export const personal = {
   github: 'https://github.com/tommyiversonj',
 }
 
+export const availability = {
+  status: 'Open to full-time, remote backend engineering roles',
+  location: 'Harper, Maryland County, Liberia (GMT / UTC+0)',
+  experienceSince: 2018,
+  // TODO: adjust if you have specific relocation, sponsorship, or notice-period
+  // details you want recruiters to see up front.
+  notes: 'Comfortable working async across time zones; open to contract or full-time engagements.',
+}
+
 export const about = {
   summary:
     "I'm a Backend Software Engineer and Medical Informatics Officer with extensive experience implementing and scaling OpenMRS-based health information systems across Liberian health facilities. I design APIs, optimize workflows, and improve data quality for digital health deployments serving over 150,000 patients. ALX-trained in Python, PostgreSQL, and REST API development, I focus on practical, data-driven solutions that hold up in the field.",
@@ -93,6 +102,10 @@ export const projects = [
       'Maven-based OpenMRS configuration package for PIH Liberia. Defines custom EMR forms and clinical workflows deployed via the OpenMRS SDK, plus install/watch scripts for local development against the PIH EMR platform.',
     tech: ['Java', 'Maven', 'OpenMRS SDK', 'Shell'],
     github: 'https://github.com/tommyiversonj/openmrs-config-pihliberia',
+    architecture:
+      'Custom EMR forms and clinical workflow definitions are version-controlled as a Maven module and deployed through the OpenMRS SDK, with install/watch scripts driving iterative local development against a live OpenMRS instance.',
+    dbOptimization:
+      "Form definitions map onto OpenMRS's concept dictionary and observation tables, so field design was driven by minimizing redundant concept creation and keeping observation queries performant across 150,000+ patient records.",
   },
   {
     title: 'Inventory & Sales Management API',
@@ -100,6 +113,10 @@ export const projects = [
       'ALX backend capstone project: a Django REST Framework API for tracking products, stock levels, purchases, and sales in real time. Includes token authentication, role-based permissions, atomic stock transactions, and filtering/search/ordering across endpoints.',
     tech: ['Python', 'Django REST Framework', 'PostgreSQL'],
     github: 'https://github.com/tommyiversonj/alx_be_captsone_project',
+    architecture:
+      'Django REST Framework API with token authentication and role-based permission classes gating access per endpoint; stock, purchase, and sale operations run inside atomic database transactions to prevent race conditions on concurrent stock updates.',
+    dbOptimization:
+      "PostgreSQL schema models products, stock levels, purchases, and sales as related tables with foreign-key constraints; list endpoints expose filtering, search, and ordering via DRF's query parameter backends to avoid over-fetching.",
   },
   {
     title: 'Mental Health EMR Rollout',
@@ -107,6 +124,12 @@ export const projects = [
       'Implemented a Mental Health EMR at J.J. Dossen Hospital and Pleebo Health Center, achieving 100% digital mental health data capture and replacing paper-based recordkeeping for clinical teams.',
     tech: ['OpenMRS', 'Clinical Workflow Design'],
     caseStudy: true,
+    challenge:
+      'J.J. Dossen Hospital and Pleebo Health Center tracked mental health encounters on paper, with no structured way to report on caseloads or treatment history.',
+    action:
+      'Implemented a dedicated Mental Health EMR in OpenMRS, designing clinical forms and workflows for the mental health service line and training clinical staff on digital data capture.',
+    result:
+      '100% of mental health encounters at both facilities are now captured digitally, replacing paper-based recordkeeping for clinical teams.',
   },
   {
     title: 'eLMIS & DHIS2 Data Systems',
@@ -114,6 +137,12 @@ export const projects = [
       'Managed national eLMIS and DHIS2 systems for logistics and health reporting, improving reporting accuracy and supply chain visibility across facilities.',
     tech: ['DHIS2', 'eLMIS', 'Data Management'],
     caseStudy: true,
+    challenge:
+      'National logistics and health reporting data across facilities needed a consistent, accurate system of record for supply chain and program visibility.',
+    action:
+      'Managed and validated data in the national eLMIS and DHIS2 systems, working with facility staff on data entry standards and reporting workflows.',
+    result:
+      'Improved reporting accuracy and supply chain visibility across facilities under the national HMIS.',
   },
 ]
 
@@ -142,6 +171,7 @@ export const education = [
 
 export const navLinks = [
   { label: 'About', href: '#about' },
+  { label: 'Availability', href: '#availability' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },

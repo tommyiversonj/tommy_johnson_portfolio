@@ -1,12 +1,6 @@
 import { personal } from '../data/content'
 
 export default function Hero() {
-  const initials = personal.name
-    .split(' ')
-    .map((part) => part[0])
-    .slice(0, 2)
-    .join('')
-
   return (
     <section id="top" className="relative overflow-hidden pt-32 pb-20 px-6">
       <div
@@ -18,16 +12,27 @@ export default function Hero() {
       </div>
 
       <div className="max-w-5xl mx-auto text-center">
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-dark text-2xl font-bold text-white shadow-lg shadow-accent/20">
-          {initials}
+        <div className="mx-auto mb-6 h-20 w-20 rounded-full shadow-lg shadow-accent/20 overflow-hidden ring-2 ring-accent/30">
+          <picture>
+            <source srcSet="/img/tommy.webp" type="image/webp" />
+            <img
+              src="/img/tommy.jpg"
+              alt={`${personal.name}, ${personal.title}`}
+              width={80}
+              height={80}
+              className="h-full w-full object-cover"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
           {personal.name}
+          <span className="block text-xl sm:text-2xl font-medium text-accent-dark dark:text-accent-light mt-3">
+            {personal.title}
+          </span>
         </h1>
-        <p className="text-xl sm:text-2xl font-medium text-accent-dark dark:text-accent-light mb-6">
-          {personal.title}
-        </p>
         <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-6">
           {personal.tagline}
         </p>

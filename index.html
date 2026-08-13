@@ -2,36 +2,107 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Prevents a light/dark theme flash on load by applying the stored
+         preference before first paint, ahead of React mounting. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme =
+            stored === 'dark' || stored === 'light'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tommy-johnson-portfolio.vercel.app/" />
 
-    <title>Tommy Iverson Johnson | Backend Software Engineer</title>
+    <title>Tommy Iverson Johnson | Backend Software Engineer (Python, Django, PostgreSQL)</title>
     <meta
       name="description"
-      content="Tommy Iverson Johnson is a Backend Software Engineer and Medical Informatics Officer building reliable backend systems and health information platforms across Liberia."
+      content="Tommy Iverson Johnson is a Backend Software Engineer building REST APIs with Python, Django REST Framework, and PostgreSQL, plus OpenMRS-based health information systems across Liberia serving 150,000+ patients. Open to full-time, remote backend roles."
     />
     <meta name="author" content="Tommy Iverson Johnson" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Tommy Iverson Johnson | Backend Software Engineer" />
+    <meta property="og:url" content="https://tommy-johnson-portfolio.vercel.app/" />
+    <meta property="og:title" content="Tommy Iverson Johnson | Backend Software Engineer (Python, Django, PostgreSQL)" />
     <meta
       property="og:description"
-      content="Backend Software Engineer and Medical Informatics Officer building reliable backend systems and health information platforms across Liberia."
+      content="Backend Software Engineer building REST APIs with Python, Django REST Framework, and PostgreSQL, plus OpenMRS-based health information systems across Liberia."
     />
     <meta property="og:image" content="/og-image.svg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tommy Iverson Johnson | Backend Software Engineer" />
+    <meta name="twitter:title" content="Tommy Iverson Johnson | Backend Software Engineer (Python, Django, PostgreSQL)" />
     <meta
       name="twitter:description"
-      content="Backend Software Engineer and Medical Informatics Officer building reliable backend systems and health information platforms across Liberia."
+      content="Backend Software Engineer building REST APIs with Python, Django REST Framework, and PostgreSQL, plus OpenMRS-based health information systems across Liberia."
     />
     <meta name="twitter:image" content="/og-image.svg" />
+
+    <!-- Structured data for search engines / recruiter tooling that reads schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tommy Iverson Johnson",
+        "jobTitle": "Backend Software Engineer",
+        "url": "https://tommy-johnson-portfolio.vercel.app/",
+        "sameAs": [
+          "https://www.linkedin.com/in/tommyiversonjohnson/",
+          "https://github.com/tommyiversonj"
+        ],
+        "knowsAbout": [
+          "Python",
+          "Django REST Framework",
+          "PostgreSQL",
+          "REST API Development",
+          "OpenMRS",
+          "Health Informatics"
+        ]
+      }
+    </script>
   </head>
   <body class="bg-white dark:bg-slate-900 transition-colors">
     <div id="root"></div>
+
+    <!-- Fallback for crawlers/tools that don't execute JavaScript (some ATS
+         scrapers and link-preview bots). Mirrors the rendered page content;
+         browsers with JS enabled never display this. -->
+    <noscript>
+      <div style="max-width: 640px; margin: 2rem auto; padding: 0 1.5rem; font-family: system-ui, sans-serif; color: #0f172a;">
+        <h1>Tommy Iverson Johnson — Backend Software Engineer &amp; Medical Informatics Officer</h1>
+        <p>
+          Building reliable backend systems and health information platforms across Liberia.
+          Experienced with Python, Django REST Framework, PostgreSQL, and OpenMRS.
+        </p>
+        <h2>Projects</h2>
+        <ul>
+          <li>OpenMRS Config – PIH Liberia (Java, Maven, OpenMRS SDK)</li>
+          <li>Inventory &amp; Sales Management API (Python, Django REST Framework, PostgreSQL)</li>
+          <li>Mental Health EMR Rollout (OpenMRS, Clinical Workflow Design)</li>
+          <li>eLMIS &amp; DHIS2 Data Systems (DHIS2, eLMIS, Data Management)</li>
+        </ul>
+        <p>
+          Contact:
+          <a href="mailto:johnsoniverson@gmail.com">johnsoniverson@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/tommyiversonjohnson/">LinkedIn</a> ·
+          <a href="https://github.com/tommyiversonj">GitHub</a>
+        </p>
+      </div>
+    </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -9,8 +9,49 @@ export default function ProjectCard({ project }) {
           </span>
         )}
       </div>
-      <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1">{project.description}</p>
-      <div className="flex flex-wrap gap-2 mb-4">
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">{project.description}</p>
+
+      {(project.architecture || project.dbOptimization) && (
+        <dl className="space-y-3 mb-4 text-sm">
+          {project.architecture && (
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white mb-1">System Architecture</dt>
+              <dd className="text-slate-600 dark:text-slate-300">{project.architecture}</dd>
+            </div>
+          )}
+          {project.dbOptimization && (
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Database & Query Optimization</dt>
+              <dd className="text-slate-600 dark:text-slate-300">{project.dbOptimization}</dd>
+            </div>
+          )}
+        </dl>
+      )}
+
+      {(project.challenge || project.action || project.result) && (
+        <dl className="space-y-3 mb-4 text-sm">
+          {project.challenge && (
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Challenge</dt>
+              <dd className="text-slate-600 dark:text-slate-300">{project.challenge}</dd>
+            </div>
+          )}
+          {project.action && (
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Action</dt>
+              <dd className="text-slate-600 dark:text-slate-300">{project.action}</dd>
+            </div>
+          )}
+          {project.result && (
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Result</dt>
+              <dd className="text-slate-600 dark:text-slate-300">{project.result}</dd>
+            </div>
+          )}
+        </dl>
+      )}
+
+      <div className="flex flex-wrap gap-2 mb-4 mt-auto">
         {project.tech.map((tech) => (
           <span
             key={tech}

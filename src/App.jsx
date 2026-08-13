@@ -1,6 +1,7 @@
 import { useDarkMode } from './hooks/useDarkMode'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Availability from './components/Availability'
 import About from './components/About'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
@@ -18,6 +19,9 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <Reveal>
+          <Availability />
+        </Reveal>
         <Reveal>
           <About />
         </Reveal>
