@@ -7,9 +7,11 @@
       <stop offset="1" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect x="70" y="70" width="72" height="72" rx="16" fill="#0d9488"/>
-  <text x="106" y="120" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">TJ</text>
-  <text x="70" y="280" font-family="'Segoe UI', Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Tommy Iverson Johnson</text>
-  <text x="70" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="32" fill="#5eead4">Backend Software Engineer &amp; Medical Informatics Officer</text>
-  <text x="70" y="400" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#94a3b8">Building reliable backend systems and health information platforms across Liberia</text>
+  <rect x="70" y="66" width="72" height="72" rx="16" fill="#0d9488"/>
+  <text x="106" y="116" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">TJ</text>
+  <text x="70" y="270" font-family="'Segoe UI', Arial, sans-serif" font-size="54" font-weight="700" fill="#ffffff">Tommy Iverson Johnson</text>
+  <text x="70" y="330" font-family="'Segoe UI', Arial, sans-serif" font-size="34" font-weight="600" fill="#5eead4">Scalable Backend &amp; Health Informatics Systems</text>
+  <text x="70" y="385" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#94a3b8">6+ Years Experience · 150,000+ Patients Served · Python · Django · OpenMRS · DHIS2</text>
+  <line x1="70" y1="430" x2="1130" y2="430" stroke="#1e293b" stroke-width="2"/>
+  <text x="70" y="475" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#64748b">Backend Software Engineer &amp; Medical Informatics Officer · Harper, Liberia</text>
 </svg>

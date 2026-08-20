@@ -58,7 +58,43 @@ Vercel project's **Settings → Domains**.
 ## Before going live
 
 - Swap `public/favicon.svg` / `public/og-image.svg` for custom artwork if
-  you'd like something beyond the generated placeholders.
+  you'd like something beyond the generated placeholders — see below for
+  `public/og-image.png`.
+
+## Ad-ready: social previews & analytics
+
+**OG/Twitter image.** `public/og-image.png` (1200×630) is a static raster
+export of `public/og-image.svg`. `index.html` points `og:image`/`twitter:image`
+at the absolute URL of that PNG — LinkedIn and Meta's crawlers render SVG
+previews unreliably, so the raster file is what ships in link previews. If
+you edit the SVG, re-export a matching 1200×630 PNG or JPG (any design tool,
+or a browser screenshot of the SVG) and overwrite `public/og-image.png`.
+
+Test previews with:
+- [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
+- [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
+- [X Card Validator](https://cards-dev.twitter.com/validator)
+
+Use **Scrape Again** in each tool after deploying — they cache previews per URL.
+
+**GA4 & Meta Pixel.** Both are wired up in `src/lib/analytics.js` but stay
+fully inert (no script tags, no network requests) until you set real IDs.
+Copy `.env.example` to `.env` and set:
+
+```
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX   # GA4 Admin → Data Streams
+VITE_META_PIXEL_ID=1234567890123456   # Meta Events Manager → Data Sources
+```
+
+Restart the dev server (or redeploy) after setting these. Both scripts load
+lazily once the page is idle, so they don't compete with initial page-load
+performance.
+
+**Conversion tracking.** Clicking the email, LinkedIn, or GitHub links in the
+Contact section fires `trackConversion(channel)` (`src/lib/analytics.js`),
+which sends a GA4 `conversion` event and a Meta Pixel `Conversion` custom
+event — visible in GA4's Realtime view and Meta Events Manager's Test Events
+tool once the IDs above are set.
 
 ## Editing content
 

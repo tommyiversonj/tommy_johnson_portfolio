@@ -1,7 +1,7 @@
 export const personal = {
   name: 'Tommy Iverson Johnson',
   title: 'Backend Software Engineer & Medical Informatics Officer',
-  tagline: 'Building reliable backend systems and health information platforms across Liberia',
+  tagline: 'Building resilient backend infrastructure and health information platforms serving 150,000+ patients across Liberia',
   focusAreas: ['Backend APIs', 'Health Informatics', 'OpenMRS'],
   email: 'johnsoniverson@gmail.com',
   phone: '+231 886 137 029',
@@ -9,6 +9,12 @@ export const personal = {
   linkedin: 'https://www.linkedin.com/in/tommyiversonjohnson/',
   github: 'https://github.com/tommyiversonj',
 }
+
+export const stats = [
+  { value: '6+', label: 'Years Experience' },
+  { value: '150K+', label: 'Patient Records Managed' },
+  { value: '3+', label: 'Enterprise Health Rollouts' },
+]
 
 export const availability = {
   status: 'Open to full-time, remote backend engineering roles',
@@ -98,51 +104,47 @@ export const experience = [
 export const projects = [
   {
     title: 'OpenMRS Config – PIH Liberia',
-    description:
-      'Maven-based OpenMRS configuration package for PIH Liberia. Defines custom EMR forms and clinical workflows deployed via the OpenMRS SDK, plus install/watch scripts for local development against the PIH EMR platform.',
+    description: 'Custom OpenMRS EMR configuration deployed across PIH Liberia health facilities.',
     tech: ['Java', 'Maven', 'OpenMRS SDK', 'Shell'],
     github: 'https://github.com/tommyiversonj/openmrs-config-pihliberia',
-    architecture:
-      'Custom EMR forms and clinical workflow definitions are version-controlled as a Maven module and deployed through the OpenMRS SDK, with install/watch scripts driving iterative local development against a live OpenMRS instance.',
-    dbOptimization:
-      "Form definitions map onto OpenMRS's concept dictionary and observation tables, so field design was driven by minimizing redundant concept creation and keeping observation queries performant across 150,000+ patient records.",
+    highlights: [
+      'Designed clinical workflows and EMR forms for a Mental Health rollout across 2 facilities',
+      'Version-controlled as a Maven module, deployed through the OpenMRS SDK',
+      'Form fields mapped to the concept dictionary to keep observation queries performant at 150,000+ patient records',
+    ],
   },
   {
     title: 'Inventory & Sales Management API',
-    description:
-      'ALX backend capstone project: a Django REST Framework API for tracking products, stock levels, purchases, and sales in real time. Includes token authentication, role-based permissions, atomic stock transactions, and filtering/search/ordering across endpoints.',
+    description: 'Django REST Framework API for real-time inventory, purchasing, and sales tracking.',
     tech: ['Python', 'Django REST Framework', 'PostgreSQL'],
     github: 'https://github.com/tommyiversonj/alx_be_captsone_project',
-    architecture:
-      'Django REST Framework API with token authentication and role-based permission classes gating access per endpoint; stock, purchase, and sale operations run inside atomic database transactions to prevent race conditions on concurrent stock updates.',
-    dbOptimization:
-      "PostgreSQL schema models products, stock levels, purchases, and sales as related tables with foreign-key constraints; list endpoints expose filtering, search, and ordering via DRF's query parameter backends to avoid over-fetching.",
+    highlights: [
+      'Token authentication with role-based permissions gating access per endpoint',
+      'Atomic database transactions prevent race conditions on concurrent stock updates',
+      'Filtering, search, and ordering across list endpoints via DRF query backends',
+    ],
   },
   {
     title: 'Mental Health EMR Rollout',
-    description:
-      'Implemented a Mental Health EMR at J.J. Dossen Hospital and Pleebo Health Center, achieving 100% digital mental health data capture and replacing paper-based recordkeeping for clinical teams.',
+    description: 'Digitized mental health recordkeeping at 2 hospitals, replacing paper charts entirely.',
     tech: ['OpenMRS', 'Clinical Workflow Design'],
     caseStudy: true,
-    challenge:
-      'J.J. Dossen Hospital and Pleebo Health Center tracked mental health encounters on paper, with no structured way to report on caseloads or treatment history.',
-    action:
-      'Implemented a dedicated Mental Health EMR in OpenMRS, designing clinical forms and workflows for the mental health service line and training clinical staff on digital data capture.',
-    result:
-      '100% of mental health encounters at both facilities are now captured digitally, replacing paper-based recordkeeping for clinical teams.',
+    highlights: [
+      'Problem: mental health encounters tracked on paper — no structured caseload or treatment-history reporting',
+      'Action: built dedicated OpenMRS forms and workflows, trained clinical staff on digital capture',
+      'Result: 100% of mental health encounters now captured digitally across both facilities',
+    ],
   },
   {
     title: 'eLMIS & DHIS2 Data Systems',
-    description:
-      'Managed national eLMIS and DHIS2 systems for logistics and health reporting, improving reporting accuracy and supply chain visibility across facilities.',
+    description: 'Managed national eLMIS/DHIS2 systems for supply chain and health reporting.',
     tech: ['DHIS2', 'eLMIS', 'Data Management'],
     caseStudy: true,
-    challenge:
-      'National logistics and health reporting data across facilities needed a consistent, accurate system of record for supply chain and program visibility.',
-    action:
-      'Managed and validated data in the national eLMIS and DHIS2 systems, working with facility staff on data entry standards and reporting workflows.',
-    result:
-      'Improved reporting accuracy and supply chain visibility across facilities under the national HMIS.',
+    highlights: [
+      'Problem: inconsistent facility-level data entry undermined national supply chain reporting',
+      'Action: validated facility data, standardized entry and reporting workflows nationwide',
+      'Result: improved reporting accuracy and supply chain visibility across the national HMIS',
+    ],
   },
 ]
 

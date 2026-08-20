@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { personal } from '../data/content'
+import { trackConversion } from '../lib/analytics'
 import SectionHeading from './SectionHeading'
 
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID
@@ -46,10 +47,25 @@ export default function Contact() {
             Open to backend engineering and health informatics opportunities. Reach out directly or
             send a message.
           </p>
-          <ContactLink label={personal.email} href={`mailto:${personal.email}`} icon="mail" />
+          <ContactLink
+            label={personal.email}
+            href={`mailto:${personal.email}`}
+            icon="mail"
+            onClick={() => trackConversion('email')}
+          />
           <ContactLink label={personal.phone} href={`tel:${personal.phone.replace(/\s/g, '')}`} icon="phone" />
-          <ContactLink label="LinkedIn" href={personal.linkedin} icon="linkedin" />
-          <ContactLink label="GitHub" href={personal.github} icon="github" />
+          <ContactLink
+            label="LinkedIn"
+            href={personal.linkedin}
+            icon="linkedin"
+            onClick={() => trackConversion('linkedin')}
+          />
+          <ContactLink
+            label="GitHub"
+            href={personal.github}
+            icon="github"
+            onClick={() => trackConversion('github')}
+          />
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -113,12 +129,13 @@ export default function Contact() {
   )
 }
 
-function ContactLink({ label, href, icon }) {
+function ContactLink({ label, href, icon, onClick }) {
   return (
     <a
       href={href}
       target={href.startsWith('http') ? '_blank' : undefined}
       rel={href.startsWith('http') ? 'noreferrer' : undefined}
+      onClick={onClick}
       className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-accent-dark dark:hover:text-accent-light transition-colors"
     >
       <Icon name={icon} />

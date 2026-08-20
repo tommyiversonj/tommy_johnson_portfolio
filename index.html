@@ -26,31 +26,53 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://tommy-johnson-portfolio.vercel.app/" />
 
-    <title>Tommy Iverson Johnson | Backend Software Engineer (Python, Django, PostgreSQL)</title>
+    <title>Tommy Iverson Johnson | Scalable Backend & Health Informatics Systems</title>
     <meta
       name="description"
-      content="Tommy Iverson Johnson is a Backend Software Engineer building REST APIs with Python, Django REST Framework, and PostgreSQL, plus OpenMRS-based health information systems across Liberia serving 150,000+ patients. Open to full-time, remote backend roles."
+      content="Tommy Iverson Johnson is a Backend Software Engineer & Medical Informatics Officer building resilient backend infrastructure and health information platforms serving 150,000+ patients across Liberia. 6+ years with Python, Django REST Framework, PostgreSQL, OpenMRS, DHIS2, and eLMIS. Open to full-time, remote backend roles."
     />
     <meta name="author" content="Tommy Iverson Johnson" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph — tailored for LinkedIn/Meta link-preview cards.
+         og:image must be an absolute URL and a raster format (jpg/png):
+         SVG previews render inconsistently or not at all on these crawlers.
+         public/og-image.png is a static 1200x630 export of og-image.svg —
+         re-export it (e.g. via a design tool, or ask Claude to re-render it)
+         if you edit the SVG. -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tommy-johnson-portfolio.vercel.app/" />
-    <meta property="og:title" content="Tommy Iverson Johnson | Backend Software Engineer (Python, Django, PostgreSQL)" />
+    <meta property="og:site_name" content="Tommy Iverson Johnson" />
+    <meta property="og:title" content="Tommy Iverson Johnson | Scalable Backend & Health Informatics Systems" />
     <meta
       property="og:description"
-      content="Backend Software Engineer building REST APIs with Python, Django REST Framework, and PostgreSQL, plus OpenMRS-based health information systems across Liberia."
+      content="Backend Software Engineer & Medical Informatics Officer building resilient backend infrastructure and health information platforms serving 150,000+ patients across Liberia. 6+ years, Python, Django REST Framework, PostgreSQL, OpenMRS, DHIS2, eLMIS."
     />
-    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image" content="https://tommy-johnson-portfolio.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tommy Iverson Johnson | Scalable Backend & Health Informatics Systems" />
 
-    <!-- Twitter -->
+    <!-- Twitter/X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tommy Iverson Johnson | Backend Software Engineer (Python, Django, PostgreSQL)" />
+    <meta name="twitter:title" content="Tommy Iverson Johnson | Scalable Backend & Health Informatics Systems" />
     <meta
       name="twitter:description"
-      content="Backend Software Engineer building REST APIs with Python, Django REST Framework, and PostgreSQL, plus OpenMRS-based health information systems across Liberia."
+      content="Backend Software Engineer & Medical Informatics Officer building resilient backend infrastructure and health information platforms serving 150,000+ patients across Liberia."
     />
-    <meta name="twitter:image" content="/og-image.svg" />
+    <meta name="twitter:image" content="https://tommy-johnson-portfolio.vercel.app/og-image.png" />
+    <meta name="twitter:image:alt" content="Tommy Iverson Johnson | Scalable Backend & Health Informatics Systems" />
+
+    <!-- Analytics & pixel tracking (Ad-Ready)
+         GA4 (gtag.js) and the Meta Pixel are loaded from src/lib/analytics.js,
+         not inline here — they're gated behind VITE_GA_MEASUREMENT_ID and
+         VITE_META_PIXEL_ID (see .env.example) so the site ships with zero
+         third-party network calls until real IDs are configured, and load
+         after the page goes idle so they never compete with LCP/TBT.
+         initAnalytics() runs from src/main.jsx on app mount.
+         trackConversion(channel) fires from the email/LinkedIn/GitHub links
+         in src/components/Contact.jsx. -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://connect.facebook.net" />
 
     <!-- Structured data for search engines / recruiter tooling that reads schema.org -->
     <script type="application/ld+json">
@@ -70,6 +92,8 @@
           "PostgreSQL",
           "REST API Development",
           "OpenMRS",
+          "DHIS2",
+          "eLMIS",
           "Health Informatics"
         ]
       }
@@ -85,8 +109,9 @@
       <div style="max-width: 640px; margin: 2rem auto; padding: 0 1.5rem; font-family: system-ui, sans-serif; color: #0f172a;">
         <h1>Tommy Iverson Johnson — Backend Software Engineer &amp; Medical Informatics Officer</h1>
         <p>
-          Building reliable backend systems and health information platforms across Liberia.
-          Experienced with Python, Django REST Framework, PostgreSQL, and OpenMRS.
+          Building resilient backend infrastructure and health information platforms serving
+          150,000+ patients across Liberia. 6+ years with Python, Django REST Framework,
+          PostgreSQL, OpenMRS, DHIS2, and eLMIS.
         </p>
         <h2>Projects</h2>
         <ul>

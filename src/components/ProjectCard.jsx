@@ -11,44 +11,17 @@ export default function ProjectCard({ project }) {
       </div>
       <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">{project.description}</p>
 
-      {(project.architecture || project.dbOptimization) && (
-        <dl className="space-y-3 mb-4 text-sm">
-          {project.architecture && (
-            <div>
-              <dt className="font-semibold text-slate-900 dark:text-white mb-1">System Architecture</dt>
-              <dd className="text-slate-600 dark:text-slate-300">{project.architecture}</dd>
-            </div>
-          )}
-          {project.dbOptimization && (
-            <div>
-              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Database & Query Optimization</dt>
-              <dd className="text-slate-600 dark:text-slate-300">{project.dbOptimization}</dd>
-            </div>
-          )}
-        </dl>
-      )}
-
-      {(project.challenge || project.action || project.result) && (
-        <dl className="space-y-3 mb-4 text-sm">
-          {project.challenge && (
-            <div>
-              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Challenge</dt>
-              <dd className="text-slate-600 dark:text-slate-300">{project.challenge}</dd>
-            </div>
-          )}
-          {project.action && (
-            <div>
-              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Action</dt>
-              <dd className="text-slate-600 dark:text-slate-300">{project.action}</dd>
-            </div>
-          )}
-          {project.result && (
-            <div>
-              <dt className="font-semibold text-slate-900 dark:text-white mb-1">Result</dt>
-              <dd className="text-slate-600 dark:text-slate-300">{project.result}</dd>
-            </div>
-          )}
-        </dl>
+      {project.highlights && (
+        <ul className="space-y-2 mb-4 text-sm">
+          {project.highlights.map((point) => (
+            <li key={point} className="flex gap-2 text-slate-600 dark:text-slate-300">
+              <span className="mt-0.5 text-accent-dark dark:text-accent-light" aria-hidden="true">
+                ▸
+              </span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
       )}
 
       <div className="flex flex-wrap gap-2 mb-4 mt-auto">
