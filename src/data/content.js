@@ -27,7 +27,7 @@ export const availability = {
 
 export const about = {
   summary:
-    "I'm a Backend Software Engineer and Medical Informatics Officer with extensive experience implementing and scaling OpenMRS-based health information systems across Liberian health facilities. I design APIs, optimize workflows, and improve data quality for digital health deployments serving over 150,000 patients. ALX-trained in Python, PostgreSQL, and REST API development, I focus on practical, data-driven solutions that hold up in the field.",
+    "I build backend systems and health information platforms that hold up under real clinical conditions — not in theory, but in production, for 150,000+ patients across Liberia. With 6+ years across Python, Django REST Framework, PostgreSQL, and enterprise OpenMRS/DHIS2 deployments, I care as much about atomic transactions and query performance as I do about whether a nurse can trust the number on her screen. My work sits at the intersection of resilient backend engineering and digital health equity, where downtime or bad data isn't an inconvenience — it's a patient outcome.",
   personalTouch:
     "Outside of work, I enjoy mentoring aspiring health technologists and experimenting in the kitchen.",
 }
@@ -144,6 +144,17 @@ export const projects = [
       'Problem: inconsistent facility-level data entry undermined national supply chain reporting',
       'Action: validated facility data, standardized entry and reporting workflows nationwide',
       'Result: improved reporting accuracy and supply chain visibility across the national HMIS',
+    ],
+  },
+  {
+    title: 'Anthony Elliott Portfolio (Client Project)',
+    description: 'Freelance-built portfolio site for a client — an Astro + Tailwind static site with a distinctive "Uptime Bar" timeline concept.',
+    tech: ['Astro', 'TypeScript', 'Tailwind CSS'],
+    github: 'https://github.com/tommyiversonj/anthony-elliott-portfolio',
+    highlights: [
+      'Content-driven architecture — experience, expertise, and credentials as Zod-validated JSON files, no component changes needed to update content',
+      'Full light/dark theming with a pre-paint inline script to prevent theme-flash on load',
+      'Progressively-enhanced contact form (Formspree) that degrades gracefully without JavaScript',
     ],
   },
 ]
